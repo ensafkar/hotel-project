@@ -1,0 +1,472 @@
+
+/* Önceden belirtilen renkler */
+:root {
+    --tas: #8a7e78; /* Taş rengi */
+    --kiremit: #b55239; /* Kiremit rengi */
+    --bej: #f5e7de; /* Bej rengi */
+    --siyah: #333; /* Siyah rengi */
+}
+
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* main style */
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+    font-weight: 400;
+    background-color: var(--bej);
+}
+
+a {
+    color: var(--siyah);
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    padding-bottom: 20px;
+    color: var(--tas);
+    font-weight: bold;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* Utility(yardımcı) classes */
+.container {
+    margin: auto;
+    max-width: 1100px;
+    overflow: auto;
+    padding: 0 20px;
+}
+
+.text-primary {
+    color: var(--kiremit);
+}
+
+.lead {
+    font-size: 20px;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 18px;
+    color: var(--bej);
+    background-color: var(--kiremit);
+    padding: 13px 20px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--tas);
+    color: var(--bej);
+}
+
+.btn-light {
+    background: var(--bej);
+    color: var(--siyah);
+}
+
+.bg-dark {
+    background: var(--siyah);
+    color: var(--bej);
+}
+
+.bg-light {
+    background: var(--bej);
+    color: var(--siyah);
+}
+
+.bg-primary {
+    background: var(--kiremit);
+    color: var(--bej);
+}
+
+/* navbar */
+#navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--tas);
+    color: var(--bej);
+    overflow: auto;
+}
+
+#navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#navbar a {
+    color: var(--bej);
+}
+
+#navbar h1, #navbar ul {
+    float: none;
+    color: var(--bej);
+}
+
+#navbar ul {
+    list-style-type: none;  /* Bu satırı ekledik */
+    padding-left: 20px;  /* Menü öğeleri arasında boşluk eklemek için */    
+    flex-direction: column;
+}
+#menu-toggle {
+    display: none;  /* Büyük ekranlarda hamburger menü simgesini gizle */
+}
+
+@media only screen and (max-width: 600px) {
+    #menu-toggle {
+        display: block;  /* Mobil görünümde hamburger menü simgesini göster */
+    }
+}
+
+#navbar ul li {
+    float: left;
+}
+
+#navbar ul li a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.current {
+    background-color: var(--siyah);
+    color: var(--bej);
+}
+
+/* Showcase */
+#showcase {
+    background: url(../IMG/showcase.jpg) no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#showcase .showcase-content {
+    color: var(--bej);
+    text-align: center;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#showcase .showcase-content h1 {
+    font-size: 60px;
+    text-align: center;
+    line-height: 1em;
+}
+
+#showcase .showcase-content p {
+    padding-bottom: 20px;
+    text-align: center;
+    line-height: 1.7em;
+}
+
+/* Home info */
+#home-info {
+    height: 400px;
+    .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+#home-info .info-img {
+    height: 400px;
+    float: left;
+    width: 50%;
+    background: url(../IMG/photo-1.jpg) no-repeat;
+    min-height: 100%;
+}
+
+#home-info .info-content {
+    float: right;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    background: var(--siyah);
+}
+
+/* Features */
+#features {
+    background-color: var(--bej);
+    padding: 20px 0;
+}
+
+.feature-box {
+    width: 30%;
+    margin: 0 1.5%;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.feature-box:hover {
+    background-color: var(--tas);
+}
+
+.feature-box i {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: var(--kiremit);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature-box {
+    width: 33.33%;
+    box-sizing: border-box;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#features {
+    background: linear-gradient(270deg, var(--tas), var(--bej), var(--kiremit));
+    background-size: 600% 600%;
+    animation: gradientBG 25s ease infinite;
+}
+/* ... (önceki kodlar) ... */
+
+.footer-container {
+    background-color: var(--tas);
+    color: var(--bej);
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* Buraya yeni stillemeleri ekleyin */
+
+/* İletişim Formu Stillemeleri */
+/* İletişim Formu Stillemeleri */
+form div {
+    margin-bottom: 20px;
+}
+address {
+    color: var(--siyah);
+}
+
+label {
+    color: var(--siyah);
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--tas);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+section.container h1 {
+    padding-top: 20px; 
+    color: var(--siyah);
+}
+
+textarea {
+    resize: vertical; /* Dikey olarak yeniden boyutlandırılabilir */
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: var(--kiremit);
+    border: none;
+    border-radius: 5px;
+    color: var(--bej);
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--tas);
+}
+
+/* ... (sonraki kodlar, özellikle @media sorguları) ... */
+footer {
+    background-color: var(--tas); 
+    height: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container {
+    background-color: var(--tas);
+    color: var(--bej);
+    text-align: center;
+    padding: bottom 0;
+    width: 100%;
+}
+
+/* Mobil cihazlar için stil (Ekran genişliği 600px'den küçük olanlar için) */
+@media only screen and (max-width: 600px) {
+    #home-info .info-img, 
+    #home-info .info-content {
+        float: none;
+        width: 100%;
+    }
+
+    #navbar .container {
+        flex-direction: column;
+    }
+
+    #navbar ul {
+        padding-top: 20px;
+    }
+
+    #navbar ul li {
+        float: none;
+        text-align: center;
+    }
+    
+    .container {
+        flex-direction: column;
+    }
+
+    .feature-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Hamburger Menü Stilleri */
+.menu-icon .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--bej);
+}
+
+/* Mobilde menünün başlangıçta gizli olması */
+@media only screen and (max-width: 600px) {
+    #navbar ul {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    #navbar ul li {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+/* Arka Plan Resmi */
+body {
+    background: url('../IMG/test-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Genel Boşluk & Margin Ayarları */
+.container {
+    padding: 50px 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 30px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Daha estetik bir font */
+body {
+    font-family: 'Arial', sans-serif; 
+}
+
+/* İkonlar için stil (Eğer Font Awesome gibi bir ikon kütüphanesi kullanıyorsanız) */
+i {
+    margin-right: 10px;
+    color: var(--kiremit);
+}
+
+/* Hakkımızda Kısmı İçin Stillemeler: */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.about-image {
+    flex: 1; /* Bölümü eşit olarak böler */
+    padding-right: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+}
+
+.about-text {
+    flex: 2; /* Bölümü eşit olarak böler */
+    padding-left: 20px;
+}
+
+/* Galeri İçin Stillemeler (Eğer isterseniz ekleyebilirsiniz): */
+.gallery-section {
+    padding: 50px 0;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: calc(33.333% - 10px);
+    margin-bottom: 20px;
+}
+
+/* Ana Konteyner Stillemesi */
+.about-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    background-color: var(--bej);
+}
+
+.about-container {
+    border-radius: 15px; 
+}

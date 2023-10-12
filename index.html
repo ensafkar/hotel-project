@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome the most extraordinary Hotel in Ankara">
+    <meta name="keywords" content="Hotel,hotel,Ankara,ankara,ankara hotel,çankaya">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Hotel BT - Welcome </title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <!-- Hamburger Menü Düğmesi -->
+    <div id="menu-toggle" class="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <!-- Diğer navbar içeriği -->
+            <div class="container">
+                <h1 class="current"><a href="index.html">HBT</a></h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>  
+            </div>
+        </nav>
+        <div id="showcase">
+            <div class="container">
+                <div class="showcase-content">
+                    <h1><span class="text-primary">Enjoy your stay</span></h1>
+                    <p class="lead">Lorem ipsum dolor sit amet, 
+                        consectetur adipisicing elit.
+                         Adipisci animi saepe dolorem. Quae, numquam. 
+                         Pariatur rem neque provident similique dolor!</p>
+                         <a class="btn" href="about.html">About our hotel</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="home-info" class="bg-dark clearfix">   
+    <div class="info-img"></div>
+    <div class="info-content">
+        <h2><span class="text-primary">The History</span> of our Hotel</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Cum quo impedit amet maxime numquam cumque perspiciatis. 
+            Hic atque ad tempore praesentium quaerat ea, sunt asperiores laudantium blanditiis cupiditate dignissimos 
+            ratione dolorum nemo magni non nostrum. Voluptates tempora quidem omnis esse.</p>
+            <a href="about.html" class="btn btn-light">Read More</a>
+        </div>
+    </section>
+    <section id="features">
+        <div class="container">
+            <!-- Location Feature -->
+            <div class="feature-box">
+                <i class="fas fa-hotel"></i> <!-- Hotel Icon -->
+                <h3>Mükemmel Lokasyon</h3>
+                <p>Otelimiz, şehrin kalbinde, turistik atraksiyonlara ve alışveriş merkezlerine yakın mükemmel bir konumda bulunmaktadır.</p>
+            </div>
+            
+            <!-- Fitness Feature -->
+            <div class="feature-box">
+                <i class="fas fa-dumbbell"></i> <!-- Dumbbell Icon -->
+                <h3>Fitness Salonu</h3>
+                <p>Modern ekipmanlarla donatılmış fitness salonumuzda sağlığınız için egzersiz yapabilirsiniz.</p>
+            </div>
+            
+            <!-- Food Feature -->
+            <div class="feature-box">
+                <i class="fas fa-utensils"></i> <!-- Food Icon -->
+                <h3>Bedava Yiyecek</h3>
+                <p>Otelimizde konaklayan misafirlerimize her gün özel olarak hazırlanmış ücretsiz kahvaltı sunmaktayız.</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-container">
+            HOTEL BT 2023 All rights reserved
+        </div>
+    </footer>
+    
+    </body>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var nav = document.getElementById('navbar').getElementsByTagName('ul')[0];
+            if (nav.style.display === 'none' || nav.style.display === '') {
+                nav.style.display = 'block';
+            } else {
+                nav.style.display = 'none';
+            }
+        });
+    </script>
+    
+    
+</html>
